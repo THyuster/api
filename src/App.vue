@@ -39,6 +39,7 @@ export default {
       pokemonData: {},
       pokemonID: '',
     }
+    
   },
 
   methods: {
