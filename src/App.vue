@@ -4,7 +4,7 @@
     <input type="text" id="pokemonInput" v-model="pokemonID" required>
     <button class="searchButton" @click="searchPokemon">Buscar Pokemon</button>
   </header>
-  <main class="main" :class="pokemonTypeClass" v-if="Object.entries(pokemonData).length > 0">
+  <main class="main" :style="{ backgroundColor: fairy }" v-if="Object.entries(pokemonData).length > 0">
     <section class="pokemonCard">
       <div class="nameImage">
         <h1 class="pokemonName hidden" ref="pokemonName">{{ pokemonData.name }}</h1>
@@ -118,11 +118,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './pokemon_types.scss';
 @import './styles.css';
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-type {
 $normal: #a8a878;
 $fire: #f08030;
 $water: #6890f0;
@@ -144,9 +144,9 @@ $fairy: #f0b5bb;
 $Arriba: gray;
 $Descripcion: gray;
 $fondoImg: black;
-}
+
 .main {
-    background-color: type-of($value: type);
+
     border-radius: 10px;
     border: 10px solid gold; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
